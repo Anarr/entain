@@ -1,0 +1,20 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: "admin"
+      POSTGRES_DB: "preferences"
+    ports:
+      - 5452:5432
+    volumes:
+      - ./internal/database/init.sql:/docker-entrypoint-initdb.d/init.sql
+  entain:
+    image: golang:1.19-alpine
+    build:
+      context: ./
+      dockerfile: ./test.Dockerfile
+    depends_on:
+      - db

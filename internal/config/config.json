@@ -1,0 +1,11 @@
+{
+  "port": "8888",
+  "task_interval": 60,
+  "postgres": {
+    "host": "db",
+    "user": "postgres",
+    "password": "admin",
+    "name": "entain",
+    "port": "5432"
+  }
+}
