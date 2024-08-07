@@ -8,7 +8,7 @@ If you wish to start the API server locally try these steps:
 - run `make compose-up`
 
 If you want to run tests
-- run `start-test`
+- run `make test`
 
 Api Doc available on:
 - http://localhost:8888/swagger/index.html

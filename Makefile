@@ -12,7 +12,7 @@ stop-test:
 	docker-compose -f docker-compose-test.yml down --rmi all -v --remove-orphans
 	docker volume prune -f
 
-start-test: #stop-test
+start-test: stop-test
 	docker-compose -f docker-compose-test.yml up --build --abort-on-container-exit --force-recreate --exit-code-from entain
 
 test:start-test
